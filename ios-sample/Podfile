@@ -1,0 +1,12 @@
+# Podfile — iOS sample app using WebViewBridge.xcframework
+#
+# Alternatively, use Swift Package Manager by adding the xcframework as a binary target.
+
+platform :ios, '15.0'
+use_frameworks!
+
+target 'WebViewBridgeSample' do
+  # WebViewBridge is distributed as a pre-built xcframework — no CocoaPods source needed.
+  # Uncomment and update the path after building with ./gradlew :shared:assembleXCFramework
+  # pod 'WebViewBridge', :path => '../shared/build/XCFrameworks/release/WebViewBridge.xcframework'
+end

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  Network Security Configuration for WebViewBridge sample.
+  In production, populate <pin-set> with your server's SHA-256 certificate pins.
+-->
+<network-security-config>
+    <base-config cleartextTrafficPermitted="false">
+        <trust-anchors>
+            <certificates src="system" />
+        </trust-anchors>
+    </base-config>
+
+    <domain-config cleartextTrafficPermitted="false">
+        <domain includeSubdomains="true">insurance.example.com</domain>
+        <!--
+        <pin-set expiration="2026-01-01">
+            <pin digest="SHA-256">BBBBB...==</pin>
+            <pin digest="SHA-256">CCCCC...==</pin>
+        </pin-set>
+        -->
+    </domain-config>
+</network-security-config>
