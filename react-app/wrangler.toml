@@ -1,0 +1,13 @@
+name = "webviewbridge-react-app"
+compatibility_date = "2024-01-01"
+compatibility_flags = ["nodejs_compat"]
+pages_build_output_dir = "dist"
+
+[build]
+command = "npm ci && npm run build"
+
+[env.production]
+name = "webviewbridge-react-app"
+
+[env.preview]
+name = "webviewbridge-react-app-preview"

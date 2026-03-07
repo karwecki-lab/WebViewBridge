@@ -7,15 +7,19 @@
     "react-dom": "^18.3.0"
   },
   "devDependencies": {
+    "@cloudflare/workers-types": "^4.20240529.0",
     "@types/react": "^18.3.0",
     "@types/react-dom": "^18.3.0",
     "@vitejs/plugin-react": "^4.3.0",
     "typescript": "^5.5.0",
-    "vite": "^5.3.0"
+    "vite": "^5.3.0",
+    "wrangler": "^3.0.0"
   },
   "scripts": {
     "dev":     "vite",
-    "build":   "tsc && vite build",
-    "preview": "vite preview"
+    "build":   "tsc --project tsconfig.json && vite build",
+    "preview": "vite preview",
+    "deploy":  "npm run build && npx wrangler pages deploy dist --project-name webviewbridge-react-app",
+    "cf:dev":  "npx wrangler pages dev dist"
   }
 }
